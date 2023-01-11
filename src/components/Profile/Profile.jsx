@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomHexColor } from 'js/getRandomHexColor';
 import css from './Profile.module.css';
 
 export const Profile = ({
@@ -20,7 +21,7 @@ export const Profile = ({
       <p className={css.location}>{location}</p>
     </div>
 
-    <ul className={css.stats}>
+    <ul className={css.stats} style={{ backgroundColor: getRandomHexColor() }}>
       <li>
         <span className={css.label}>Followers</span>
         <span className="quantity"> {stats.followers}</span>
@@ -38,9 +39,9 @@ export const Profile = ({
 };
 
 Profile.propTypes = {
-  avatar: PropTypes.string,
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  stats: PropTypes.object,
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 }
