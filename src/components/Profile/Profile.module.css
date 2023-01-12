@@ -29,7 +29,6 @@
 .stats {
   display: flex;
   justify-content: space-between;  
-  list-style: none;
   padding: 20px;  
   margin: 0;
   

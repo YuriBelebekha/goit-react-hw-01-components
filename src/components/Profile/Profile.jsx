@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { getRandomHexColor } from 'js/getRandomHexColor';
+import { getRandomHexColor } from 'utils/getRandomHexColor';
 import css from './Profile.module.css';
 
 export const Profile = ({

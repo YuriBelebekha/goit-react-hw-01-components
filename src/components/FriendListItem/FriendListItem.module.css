@@ -1,0 +1,41 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.item:not(:first-child) {
+  margin-top: 10px;  
+}
+
+.status {  
+  width: 12px;
+  height: 12px;
+  margin-right: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.false {
+  background-color: red;
+}
+
+.true {
+  background-color: green;
+}
+
+.avatar {
+  padding: 5px;
+
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.name {
+  margin-left: 15px;
+
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
