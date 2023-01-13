@@ -1,0 +1,11 @@
+td {
+  padding: 5px;
+
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr:nth-child(2n) {
+  background-color: darkgrey;
+  color: #fff;
+}
