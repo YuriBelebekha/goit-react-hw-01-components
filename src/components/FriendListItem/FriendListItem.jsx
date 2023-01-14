@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import { getRandomHexColor } from 'utils/getRandomHexColor';
 import css from './FriendListItem.module.css';
 
-export const FriendListItem = ({ avatar, name, isOnline, id }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (    
-    <li
-      key={id}
+    <li      
       className={css.item}
       style={{ backgroundColor: getRandomHexColor() }}
     >     
@@ -19,7 +18,5 @@ export const FriendListItem = ({ avatar, name, isOnline, id }) => {
 FriendListItem.propTypes = {  
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,  
+  isOnline: PropTypes.bool.isRequired,    
 };
-

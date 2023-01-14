@@ -7,7 +7,7 @@ export const Profile = ({
   username,
   tag,
   location,
-  stats,
+  stats: { followers, views, likes },
 }) => {
   return <div className={css.profile}>
     <div className={css.description}>
@@ -24,15 +24,15 @@ export const Profile = ({
     <ul className={css.stats} style={{ backgroundColor: getRandomHexColor() }}>
       <li>
         <span className={css.label}>Followers</span>
-        <span className="quantity"> {stats.followers}</span>
+        <span className="quantity"> {followers}</span>
       </li>
       <li>
         <span className={css.label}>Views</span>
-        <span className="css.quantity"> {stats.views}</span>
+        <span className="css.quantity"> {views}</span>
       </li>
       <li>
         <span className={css.label}>Likes</span>
-        <span className="quantity"> {stats.likes}</span>
+        <span className="quantity"> {likes}</span>
       </li>
     </ul>
   </div>
@@ -42,6 +42,10 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired,
+  location: PropTypes.string.isRequired,  
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  })
 }
